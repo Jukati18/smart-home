@@ -6,7 +6,8 @@
     "scripts": {
         "dev": "node --watch src/server.js",
         "start": "node src/server.js",
-        "sim": "node tools/fake-dht22.js"
+        "sim": "node tools/fake-dht22.js",
+        "sim:motion": "node tools/fake-ld2410.js"
     },
     "dependencies": {
         "cors": "^2.8.5",

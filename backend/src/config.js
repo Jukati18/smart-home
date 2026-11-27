@@ -4,6 +4,8 @@ import "dotenv/config"; // nạp file .env vào process.env
 
 export const config = {
     port: process.env.PORT || 3000,
+    // NC-02: minutes without presence before "absent" actions fire (default 10, decimals allowed for testing)
+    absentTimeoutMs: (Number(process.env.ABSENT_TIMEOUT_MIN) || 10) * 60 * 1000,
     mqtt: {
         url: process.env.MQTT_URL,           // mqtts:// = MQTT qua TLS (cổng 8883)
         username: process.env.MQTT_USERNAME,
